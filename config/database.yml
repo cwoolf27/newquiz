@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: newquiz_development
+
+test:
+  <<: *default
+  database: newquiz_test
+
+production:
+  <<: *default
+  database: newquiz_production
