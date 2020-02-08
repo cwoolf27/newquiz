@@ -2,5 +2,11 @@
   <div class="navbar-brand mx-auto">So, I hear you guys like quizzes?</div>
 </nav>
 
-<h1><%= @test.answer %></h1>
-<h2>- <%= @test.name %></h2>
+<div class="row justify-content-center">
+  <% @test.each do |test| %>
+      <div class="response col-3">
+        <h2>"<%= test.answer %>"</h2>
+        <h5>- <%= test.name %></h5>
+      </div>
+  <% end %>
+</div>
