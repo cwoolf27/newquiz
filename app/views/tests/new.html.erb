@@ -1,0 +1,7 @@
+<h1> Do you like quizzes? </h1>
+<%= simple_form_for @test do |f| %>
+  <%= f.input :answer %>
+  <%= f.input :name %>
+  <br />
+  <%= f.submit 'Create', class: 'btn btn-danger' %>
+<% end %>
